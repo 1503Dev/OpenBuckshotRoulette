@@ -1,6 +1,6 @@
 extends Node
 
-var currentVersion_nr:= "v1.0.1.16 EXTENDS v2.2.0"
+var currentVersion_nr:= "v1.0.2.17-beta EXTENDS v2.2.0"
 var currentVersion_hotfix:= 6
 var using_steam:= false
 var all_steam_features_enabled:= true
@@ -13,6 +13,7 @@ var versuffix_community:= " (OPEN SOURCE)"
 
 var discord_link:= "https://discord.gg/UdjMNaKkQe"
 var github_link:= "https://github.com/1503Dev/OpenBuckshotRoulette"
+var gitee_link:= "https://gitee.com/dev1503/OpenBuckshotRoulette"
 
 var using_gl:= false
 var controllerEnabled:= false

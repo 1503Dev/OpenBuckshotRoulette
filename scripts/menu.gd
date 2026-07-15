@@ -156,6 +156,172 @@ func _process(_delta: float) -> void:
 		else:
 			label_connection_status.text = 'DISCONNECTED'
 
+func _copy_runtime_info() -> void:
+	var lines: PackedStringArray = []
+	lines.append("[RUNTIME INFO]")
+	lines.append("GlobalVariables.currentVersion_nr = %s" % GlobalVariables.currentVersion_nr)
+	lines.append("GlobalVariables.PROTOCOL = %s" % GlobalVariables.PROTOCOL)
+	lines.append("OS.distribution_name = %s" % OS.get_distribution_name())
+	lines.append("OS.granted_permissions = %s" % _serialize_variant(OS.get_granted_permissions()))
+	lines.append("OS.locale = %s" % OS.get_locale())
+	lines.append("OS.memory_info = %s" % _serialize_variant(OS.get_memory_info()))
+	lines.append("OS.model_name = %s" % OS.get_model_name())
+	lines.append("OS.name = %s" % OS.get_name())
+	lines.append("OS.processor_count = %s" % OS.get_processor_count())
+	lines.append("OS.processor_name = %s" % OS.get_processor_name())
+	lines.append("OS.static_memory_peak_usage = %s" % OS.get_static_memory_peak_usage())
+	lines.append("OS.static_memory_usage = %s" % OS.get_static_memory_usage())
+	lines.append("OS.version = %s" % OS.get_version())
+	lines.append("OS.version_alias = %s" % OS.get_version_alias())
+	lines.append("OS.video_adapter_driver_info = %s" % _serialize_variant(OS.get_video_adapter_driver_info()))
+	lines.append("OS.is_userfs_persistent = %s" % OS.is_userfs_persistent())
+	lines.append("DisplayServer.name = %s" % DisplayServer.get_name())
+	lines.append("DisplayServer.screen_count = %s" % DisplayServer.get_screen_count())
+	lines.append("RenderingServer.current_rendering_driver_name = %s" % RenderingServer.get_current_rendering_driver_name())
+	lines.append("RenderingServer.current_rendering_method = %s" % RenderingServer.get_current_rendering_method())
+	lines.append("RenderingServer.frame_setup_time_cpu = %s" % RenderingServer.get_frame_setup_time_cpu())
+	var rd = RenderingServer.get_rendering_device()
+	if rd:
+		lines.append("RenderingServer.rendering_device = [RenderingDevice]{")
+		lines.append("    device_name = %s" % rd.get_device_name())
+		lines.append("    device_total_memory = %s" % rd.get_device_total_memory())
+		lines.append("    device_vendor_name = %s" % rd.get_device_vendor_name())
+		lines.append("}")
+	else:
+		lines.append("RenderingServer.rendering_device = null")
+	lines.append("RenderingServer.video_adapter_api_version = %s" % RenderingServer.get_video_adapter_api_version())
+	lines.append("RenderingServer.video_adapter_name = %s" % RenderingServer.get_video_adapter_name())
+	var adapter_type = RenderingServer.get_video_adapter_type()
+	var type_names = {
+		RenderingDevice.DEVICE_TYPE_OTHER: "DEVICE_TYPE_OTHER",
+		RenderingDevice.DEVICE_TYPE_INTEGRATED_GPU: "DEVICE_TYPE_INTEGRATED_GPU",
+		RenderingDevice.DEVICE_TYPE_DISCRETE_GPU: "DEVICE_TYPE_DISCRETE_GPU",
+		RenderingDevice.DEVICE_TYPE_VIRTUAL_GPU: "DEVICE_TYPE_VIRTUAL_GPU",
+		RenderingDevice.DEVICE_TYPE_CPU: "DEVICE_TYPE_CPU",
+	}
+	lines.append("RenderingServer.video_adapter_type = %s" % type_names.get(adapter_type, "DEVICE_TYPE_OTHER"))
+	lines.append("RenderingServer.video_adapter_vendor = %s" % RenderingServer.get_video_adapter_vendor())
+	lines.append("Engine.architecture_name = %s" % Engine.get_architecture_name())
+	lines.append("Engine.is_editor_hint = %s" % Engine.is_editor_hint())
+	lines.append("ModLoader.loaded_mods = %s" % _serialize_variant(ModLoader.loaded_mods))
+	DisplayServer.clipboard_set("\n".join(lines))
+
+func _serialize_variant(value: Variant) -> String:
+	match typeof(value):
+		TYPE_NIL:
+			return "null"
+		TYPE_BOOL, TYPE_INT, TYPE_FLOAT:
+			return str(value)
+		TYPE_STRING:
+			return "\"%s\"" % value
+		TYPE_DICTIONARY:
+			var dict: Dictionary = value
+			var parts: PackedStringArray = []
+			parts.append("[Dictionary]{")
+			for key in dict:
+				parts.append("    %s = %s" % [str(key), _serialize_variant(dict[key])])
+			parts.append("}")
+			return "\n".join(parts)
+		TYPE_ARRAY, TYPE_PACKED_BYTE_ARRAY, TYPE_PACKED_INT32_ARRAY, TYPE_PACKED_INT64_ARRAY, TYPE_PACKED_FLOAT32_ARRAY, TYPE_PACKED_FLOAT64_ARRAY, TYPE_PACKED_STRING_ARRAY, TYPE_PACKED_VECTOR2_ARRAY, TYPE_PACKED_VECTOR3_ARRAY, TYPE_PACKED_COLOR_ARRAY:
+			var arr = value
+			var parts: PackedStringArray = []
+			parts.append("[%s]{" % _get_type_name(typeof(value)))
+			for i in arr.size():
+				parts.append("    [%s] = %s" % [i, _serialize_variant(arr[i])])
+			parts.append("}")
+			return "\n".join(parts)
+		_:
+			if value is Object:
+				if value is ModInfo:
+					var parts: PackedStringArray = []
+					parts.append("[ModInfo]{")
+					parts.append("    name = %s" % _serialize_variant(value.name))
+					parts.append("    version = %s" % _serialize_variant(value.version))
+					parts.append("    target = %s" % _serialize_variant(value.target))
+					parts.append("    entry = %s" % _serialize_variant(value.entry))
+					parts.append("}")
+					return "\n".join(parts)
+				return "[%s]{%s}" % [value.get_class(), "\n    (object instance)\n"]
+			return str(value)
+
+func _get_type_name(type: int) -> String:
+	match type:
+		TYPE_NIL:
+			return "nil"
+		TYPE_BOOL:
+			return "bool"
+		TYPE_INT:
+			return "int"
+		TYPE_FLOAT:
+			return "float"
+		TYPE_STRING:
+			return "String"
+		TYPE_VECTOR2:
+			return "Vector2"
+		TYPE_VECTOR2I:
+			return "Vector2i"
+		TYPE_RECT2:
+			return "Rect2"
+		TYPE_RECT2I:
+			return "Rect2i"
+		TYPE_VECTOR3:
+			return "Vector3"
+		TYPE_VECTOR3I:
+			return "Vector3i"
+		TYPE_TRANSFORM2D:
+			return "Transform2D"
+		TYPE_VECTOR4:
+			return "Vector4"
+		TYPE_VECTOR4I:
+			return "Vector4i"
+		TYPE_PLANE:
+			return "Plane"
+		TYPE_QUATERNION:
+			return "Quaternion"
+		TYPE_AABB:
+			return "AABB"
+		TYPE_BASIS:
+			return "Basis"
+		TYPE_TRANSFORM3D:
+			return "Transform3D"
+		TYPE_PROJECTION:
+			return "Projection"
+		TYPE_COLOR:
+			return "Color"
+		TYPE_STRING_NAME:
+			return "StringName"
+		TYPE_NODE_PATH:
+			return "NodePath"
+		TYPE_RID:
+			return "RID"
+		TYPE_OBJECT:
+			return "Object"
+		TYPE_DICTIONARY:
+			return "Dictionary"
+		TYPE_ARRAY:
+			return "Array"
+		TYPE_PACKED_BYTE_ARRAY:
+			return "PackedByteArray"
+		TYPE_PACKED_INT32_ARRAY:
+			return "PackedInt32Array"
+		TYPE_PACKED_INT64_ARRAY:
+			return "PackedInt64Array"
+		TYPE_PACKED_FLOAT32_ARRAY:
+			return "PackedFloat32Array"
+		TYPE_PACKED_FLOAT64_ARRAY:
+			return "PackedFloat64Array"
+		TYPE_PACKED_STRING_ARRAY:
+			return "PackedStringArray"
+		TYPE_PACKED_VECTOR2_ARRAY:
+			return "PackedVector2Array"
+		TYPE_PACKED_VECTOR3_ARRAY:
+			return "PackedVector3Array"
+		TYPE_PACKED_COLOR_ARRAY:
+			return "PackedColorArray"
+		TYPE_PACKED_VECTOR4_ARRAY:
+			return "PackedVector4Array"
+	return "Variant"
+
 func _on_button_class_interact(alias: String):
 	if alias.begins_with('max fps'):
 		var current_fps:int = NeoSettings.fetch("performance/max_fps", 0)
@@ -176,6 +342,10 @@ func _on_button_class_interact(alias: String):
 		NeoSettings.increase("performance/level", 1, 3)
 	elif alias == 'open mods folder':
 		_open_mods_folder()
+	elif alias == 'copy runtime info':
+		_copy_runtime_info()
+	elif alias == 'gitee':
+		OS.shell_open(GlobalVariables.gitee_link)
 
 
 func _on_button_class_pause_user_name_is_pressed() -> void:

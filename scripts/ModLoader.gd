@@ -1,5 +1,7 @@
 extends Node
 
+var loaded_mods: Array[ModInfo] = []
+
 func _ready() -> void:
 	var all_mod_infos: Array[ModInfo] = []
 
@@ -107,6 +109,8 @@ func _scan_mods_from_dir(mods_dir_path: String) -> Array[ModInfo]:
 
 		sub_dir_name = dir.get_next()
 	dir.list_dir_end()
+	
+	loaded_mods = result
 
 	return result
 

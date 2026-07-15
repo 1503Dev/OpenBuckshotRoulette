@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://dfjx01c5mpkbn" path="res://misc/options_vinyl disk2.png" id="29"]
 [ext_resource type="Texture2D" uid="uid://dq5hakr8c82m0" path="res://misc/github icon.png" id="29_lqq6t"]
 [ext_resource type="Texture2D" uid="uid://d0bbexsobmy8k" path="res://misc/monitor_windowed.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://dk70qyrgm5dg7" path="res://misc/gitee icon.png" id="30_ebw2t"]
 [ext_resource type="Texture2D" uid="uid://bmfpqyheaxjq2" path="res://misc/monitor_fullscreen.png" id="31"]
 [ext_resource type="Texture2D" uid="uid://cy1liokt0o1io" path="res://misc/master vol2.png" id="32"]
 [ext_resource type="FontFile" uid="uid://builq3tr6w060" path="res://fonts/DOTMATRI.TTF" id="33"]
@@ -570,8 +571,8 @@ cursor = NodePath("../cursor manager")
 animator_intro = NodePath("../../animator_intro")
 speaker_music = NodePath("../../speaker_music")
 speaker_start = NodePath("../../speaker_start main")
-buttons = [NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_start/button class_start"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_options/button class_sub options"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_credits/button class_credits"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_exit/button class_exit"), NodePath("../../Camera/dialogue UI/menu ui/credits/Control2/true button_return credits/button class_return"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_exit sub options/button class_exit sub options"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_return audio video/button class_return audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_audio video/button class_audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_language/button class_language"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_controller/button class_controller"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_return options controller/button class_return options controller"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_rebinding/button class_rebinding"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_return keybinding/button class_return keybinding"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_reset keybinds/button class_reset keybinds"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Discord/true button_discord/button class_discord"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_colorblind mode/button class_colorblind mode"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_toggle music/button class_toggle music"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_multiplayer/button class_multiplayer"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_greyscale death/button class_greyscale death"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Github/true button/button class_github"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_online service/button class_online service"), NodePath("../../Camera/dialogue UI/menu ui/options_online service/true button_return options online service/button class_return options controller")]
-buttons_options = [NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_increase/button class_increase"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_decrease/button class_decrease"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_colorblind mode/button class_colorblind mode"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_toggle music/button class_toggle music"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_greyscale death/button class_greyscale death"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_online service/button class_online service")]
+buttons = [NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_start/button class_start"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_options/button class_sub options"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_credits/button class_credits"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_exit/button class_exit"), NodePath("../../Camera/dialogue UI/menu ui/credits/Control2/true button_return credits/button class_return"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_return/true button_exit sub options/button class_exit sub options"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_return audio video/button class_return audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_audio video/true button_audio video/button class_audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_language/true button_language/button class_language"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_controller/true button_controller/button class_controller"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_return options controller/button class_return options controller"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_rebinding/button class_rebinding"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_return keybinding/button class_return keybinding"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_reset keybinds/button class_reset keybinds"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Discord/true button_discord/button class_discord"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_colorblind mode/button class_colorblind mode"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_toggle music/button class_toggle music"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_multiplayer/button class_multiplayer"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_greyscale death/button class_greyscale death"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Github/true button/button class_github"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_online service/true button_online service/button class_online service"), NodePath("../../Camera/dialogue UI/menu ui/options_online service/true button_return options online service/button class_return options controller"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Gitee/true button/button class")]
+buttons_options = [NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_increase/button class_increase"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_decrease/button class_decrease"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_colorblind mode/button class_colorblind mode"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_toggle music/button class_toggle music"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_greyscale death/button class_greyscale death"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_online service/true button_online service/button class_online service")]
 screens = [NodePath("../../Camera/dialogue UI/menu ui/main screen"), NodePath("../../Camera/dialogue UI/menu ui/sub options select"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video"), NodePath("../../Camera/dialogue UI/menu ui/credits"), NodePath("../../Camera/dialogue UI/menu ui/language"), NodePath("../../Camera/dialogue UI/menu ui/options_controller"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding"), NodePath("../../Camera/dialogue UI/menu ui/options_online service")]
 parent_main = NodePath("../../Camera/dialogue UI/menu ui/main screen")
 parent_creds = NodePath("../../Camera/dialogue UI/menu ui/credits")
@@ -590,7 +591,7 @@ anim_creds = NodePath("../../Camera/dialogue UI/animator_credits")
 version = NodePath("../../Camera/dialogue UI/menu ui/main screen/version")
 menu = NodePath("../..")
 firstFocus_main = NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_start")
-firstFocus_subOptions = NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_audio video")
+firstFocus_subOptions = NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_audio video/true button_audio video")
 firstFocus_credits = NodePath("../../Camera/dialogue UI/menu ui/credits/Control2/true button_return credits")
 firstFocus_audioVideo = NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_return audio video")
 firstFocus_language = NodePath("../../Camera/dialogue UI/menu ui/language/true button_language english")
@@ -621,7 +622,7 @@ script = ExtResource("11")
 [node name="controller manager" type="Node" parent="standalone managers" unique_id=1438662990 node_paths=PackedStringArray("buttons", "brackets", "cursor")]
 script = ExtResource("12")
 dynamicallySwappingDevice = true
-buttons = [NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_decrease/button class_decrease"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_increase/button class_increase"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_return audio video/button class_return audio video"), NodePath("../../Camera/dialogue UI/menu ui/credits/Control2/true button_return credits/button class_return"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_exit/button class_exit"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_credits/button class_credits"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_options/button class_sub options"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_start/button class_start"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_audio video/button class_audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_language/button class_language"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_controller/button class_controller"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_exit sub options/button class_exit sub options"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_return options controller/button class_return options controller"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language english/button class_language english"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav up/button class_rebind nav up"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav down/button class_rebind nav down"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav left/button class_rebind nav left"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav right/button class_rebind nav right"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind select/button class_rebind select"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind restart/button class_rebind restart"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind back/button class_rebind back"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind exit/button class_rebind exit"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_reset keybinds/button class_reset keybinds"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_return keybinding/button class_return keybinding"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language english/button class_language english"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language estonia/button class_language estonia"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language french/button class_language french"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language spanish/button class_language spanish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language spanish (latin america)/button class_language spanish (latin america)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language italian/button class_language italian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language german/button class_language german"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language portuguese (brazil)/button class_language portuguese (brazil)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language portuguese (portugal)/button class_language portuguese (portugal)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language chinese (simplified)/button class_language chinese (simplified)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language chinese (traditional)/button class_language chinese (traditional)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language japanese/button class_language japanese"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language korean/button class_language korean"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language russian/button class_language russian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language ukranian/button class_language ukranian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language turkish/button class_language turkish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language polish/button class_language polish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Github/true button/button class_github"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/true button_online service/button class_online service")]
+buttons = [NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_decrease/button class_decrease"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_increase/button class_increase"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_fullscreen/button class_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_windowed/button class_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/true button_return audio video/button class_return audio video"), NodePath("../../Camera/dialogue UI/menu ui/credits/Control2/true button_return credits/button class_return"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_exit/button class_exit"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_credits/button class_credits"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_options/button class_sub options"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_start/button class_start"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_audio video/true button_audio video/button class_audio video"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_language/true button_language/button class_language"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_controller/true button_controller/button class_controller"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_return/true button_exit sub options/button class_exit sub options"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_controller enable/button class_controller enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_mouse enable/button class_mouse enable"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/true button_return options controller/button class_return options controller"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language english/button class_language english"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav up/button class_rebind nav up"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav down/button class_rebind nav down"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav left/button class_rebind nav left"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind nav right/button class_rebind nav right"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind select/button class_rebind select"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind restart/button class_rebind restart"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind back/button class_rebind back"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_rebind exit/button class_rebind exit"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_reset keybinds/button class_reset keybinds"), NodePath("../../Camera/dialogue UI/menu ui/controller rebinding/true button_return keybinding/button class_return keybinding"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language english/button class_language english"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language estonia/button class_language estonia"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language french/button class_language french"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language spanish/button class_language spanish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language spanish (latin america)/button class_language spanish (latin america)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language italian/button class_language italian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language german/button class_language german"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language portuguese (brazil)/button class_language portuguese (brazil)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language portuguese (portugal)/button class_language portuguese (portugal)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language chinese (simplified)/button class_language chinese (simplified)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language chinese (traditional)/button class_language chinese (traditional)"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language japanese/button class_language japanese"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language korean/button class_language korean"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language russian/button class_language russian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language ukranian/button class_language ukranian"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language turkish/button class_language turkish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language polish/button class_language polish"), NodePath("../../Camera/dialogue UI/menu ui/language/true button_language return/button class_language return"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Github/true button/button class_github"), NodePath("../../Camera/dialogue UI/menu ui/sub options select/button_online service/true button_online service/button class_online service")]
 brackets = [NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_volume up"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_volume down"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_windowed"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_fullscreen"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/bracket selection_controller"), NodePath("../../Camera/dialogue UI/menu ui/options_controller/bracket selection_mouse"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Discord/bracket selection_discord"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_colorblind mode"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_toggle music"), NodePath("../../Camera/dialogue UI/menu ui/options_audio video/bracket selection_greyscale death"), NodePath("../../Camera/dialogue UI/menu ui/main screen/Control_Github/bracket selection")]
 cursor = NodePath("../cursor manager")
 exitingButtons = true
@@ -811,7 +812,6 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="main screen" type="Control" parent="Camera/dialogue UI/menu ui" unique_id=474929423]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -871,9 +871,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -99.0
+offset_left = -89.00004
 offset_top = -86.0
-offset_right = -88.131165
+offset_right = -80.881134
 offset_bottom = -78.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -906,6 +906,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
 grow_horizontal = 0
 grow_vertical = 0
 
@@ -948,14 +950,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -173.0
+offset_left = -163.00003
 offset_top = -85.99994
-offset_right = -162.13116
+offset_right = -154.75018
 offset_bottom = -77.99994
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(7.63651, 9.17861)
-focus_neighbor_left = NodePath("../../Control_MainOptions/true button_exit")
+focus_neighbor_left = NodePath("../../Control_Gitee/true button")
 focus_neighbor_top = NodePath("../../Control_MainOptions/true button_exit")
 focus_neighbor_right = NodePath("../../Control_Discord/true button_discord")
 focus_neighbor_bottom = NodePath("../../Control_MainOptions/true button_start")
@@ -964,6 +966,84 @@ focus_neighbor_bottom = NodePath("../../Control_MainOptions/true button_start")
 script = ExtResource("28")
 cursor = NodePath("../../../../../../../standalone managers/cursor manager")
 alias = "github"
+isActive = true
+isDynamic = true
+ui = NodePath("../../bracket selection")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
+playing = true
+altsound = true
+ui_opacity_inactive = 0.0
+ui_opacity_active = 1.0
+resetting = true
+
+[node name="Control_Gitee" type="Control" parent="Camera/dialogue UI/menu ui/main screen" unique_id=187246597]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_right = -58.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="bracket selection" type="TextureRect" parent="Camera/dialogue UI/menu ui/main screen/Control_Gitee" unique_id=592042926]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -85.000244
+offset_right = 295.0
+offset_bottom = 366.99976
+scale = Vector2(0.181524, 0.146467)
+texture = ExtResource("25")
+
+[node name="icon" type="TextureRect" parent="Camera/dialogue UI/menu ui/main screen/Control_Gitee" unique_id=574376723]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -86.0
+offset_right = 825.0
+offset_bottom = 1070.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.0631802, 0.0631802)
+texture = ExtResource("30_ebw2t")
+
+[node name="true button" type="Button" parent="Camera/dialogue UI/menu ui/main screen/Control_Gitee" unique_id=1696321023]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.00003
+offset_top = -85.99994
+offset_right = -154.75018
+offset_bottom = -77.99994
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(7.63651, 9.17861)
+focus_neighbor_left = NodePath("../../Control_MainOptions/true button_exit")
+focus_neighbor_top = NodePath("../../Control_MainOptions/true button_exit")
+focus_neighbor_right = NodePath("../../Control_Github/true button")
+focus_neighbor_bottom = NodePath("../../Control_MainOptions/true button_start")
+
+[node name="button class" type="Node" parent="Camera/dialogue UI/menu ui/main screen/Control_Gitee/true button" unique_id=1754056841 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "gitee"
 isActive = true
 isDynamic = true
 ui = NodePath("../../bracket selection")
@@ -1212,7 +1292,7 @@ offset_right = -17.87994
 offset_bottom = 186.00008
 scale = Vector2(6.46671, 2.77652)
 focus_neighbor_top = NodePath("../true button_credits")
-focus_neighbor_right = NodePath("../../Control_Github/true button")
+focus_neighbor_right = NodePath("../../Control_Gitee/true button")
 focus_neighbor_bottom = NodePath("../true button_start")
 
 [node name="button class_exit" type="Node" parent="Camera/dialogue UI/menu ui/main screen/Control_MainOptions/true button_exit" unique_id=1430264673 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
@@ -1289,24 +1369,23 @@ text = "insert version number here"
 [node name="sub options select" type="Control" parent="Camera/dialogue UI/menu ui" unique_id=1189015599]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -14.0
-offset_right = 20.0
-offset_bottom = 26.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="button_audio video" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1666786648]
-layout_mode = 0
-offset_left = -459.99994
-offset_top = 71.0
-offset_right = 500.00006
-offset_bottom = 110.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.19757
+offset_top = 57.0
+offset_right = 479.80243
+offset_bottom = 96.0
 scale = Vector2(0.760005, 1)
 pivot_offset = Vector2(480, 0)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -1315,12 +1394,43 @@ theme_override_font_sizes/font_size = 26
 text = "AUDIO/VIDEO"
 horizontal_alignment = 1
 
+[node name="true button_audio video" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_audio video" unique_id=1794786829]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../../button_return/true button_exit sub options")
+focus_neighbor_bottom = NodePath("../../button_language/true button_language")
+
+[node name="button class_audio video" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_audio video/true button_audio video" unique_id=1124860845 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "start"
+isActive = true
+isDynamic = true
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
+playing = true
+ui_opacity_active = 0.5
+
 [node name="button_language" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1135065153]
-layout_mode = 0
-offset_left = -459.99994
-offset_top = 96.0
-offset_right = 500.00006
-offset_bottom = 135.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.19757
+offset_top = 82.0
+offset_right = 479.80243
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.760005, 1)
 pivot_offset = Vector2(480, 0)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -1329,12 +1439,41 @@ theme_override_font_sizes/font_size = 26
 text = "OPTIONS LANGUAGE"
 horizontal_alignment = 1
 
+[node name="true button_language" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_language" unique_id=592361344]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../../button_audio video/true button_audio video")
+focus_neighbor_bottom = NodePath("../../button_controller/true button_controller")
+
+[node name="button class_language" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_language/true button_language" unique_id=2143423570 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "options"
+isActive = true
+isDynamic = true
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
+playing = true
+ui_opacity_active = 0.5
+
 [node name="button_controller" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=927448432]
-layout_mode = 0
-offset_left = -459.99994
-offset_top = 121.0
-offset_right = 500.00006
-offset_bottom = 160.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.19757
+offset_top = 107.0
+offset_right = 479.80243
+offset_bottom = 146.0
 scale = Vector2(0.760005, 1)
 pivot_offset = Vector2(480, 0)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -1343,12 +1482,41 @@ theme_override_font_sizes/font_size = 26
 text = "CONTROLLER"
 horizontal_alignment = 1
 
+[node name="true button_controller" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_controller" unique_id=832645349]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../../button_language/true button_language")
+focus_neighbor_bottom = NodePath("../../button_online service/true button_online service")
+
+[node name="button class_controller" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_controller/true button_controller" unique_id=16196375 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "credits"
+isActive = true
+isDynamic = true
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
+playing = true
+ui_opacity_active = 0.5
+
 [node name="button_online service" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=767573919]
-layout_mode = 0
-offset_left = -459.99997
-offset_top = 146.0
-offset_right = 500.00003
-offset_bottom = 185.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.1976
+offset_top = 132.0
+offset_right = 479.80237
+offset_bottom = 171.0
 scale = Vector2(0.760005, 1)
 pivot_offset = Vector2(480, 0)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -1357,12 +1525,43 @@ theme_override_font_sizes/font_size = 26
 text = "ONLINE SERVICE"
 horizontal_alignment = 1
 
+[node name="true button_online service" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_online service" unique_id=1854580287]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../../button_controller/true button_controller")
+focus_neighbor_bottom = NodePath("../../button_return/true button_exit sub options")
+
+[node name="button class_online service" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_online service/true button_online service" unique_id=652275881 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "online service"
+isActive = true
+isDynamic = true
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
+playing = true
+ui_opacity_active = 0.5
+
 [node name="button_return" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1076673211]
-layout_mode = 0
-offset_left = -459.99994
-offset_top = 172.0
-offset_right = 500.00006
-offset_bottom = 211.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.19757
+offset_top = 158.0
+offset_right = 479.80243
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.760005, 1)
 pivot_offset = Vector2(480, 0)
 focus_neighbor_top = NodePath("../button_controller")
@@ -1372,124 +1571,70 @@ theme_override_font_sizes/font_size = 26
 text = "RETURN"
 horizontal_alignment = 1
 
-[node name="true button_audio video" type="Button" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1794786829]
+[node name="true button_exit sub options" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_return" unique_id=641740606]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -62.0
-offset_top = 76.0
-offset_right = -54.0
-offset_bottom = 84.0
-scale = Vector2(21.742, 3.01166)
-focus_neighbor_top = NodePath("../true button_exit sub options")
-focus_neighbor_bottom = NodePath("../true button_language")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../../button_online service/true button_online service")
+focus_neighbor_bottom = NodePath("../../button_audio video/true button_audio video")
 
-[node name="button class_audio video" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/true button_audio video" unique_id=1124860845 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+[node name="button class_exit sub options" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_return/true button_exit sub options" unique_id=719944607 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
 script = ExtResource("28")
-cursor = NodePath("../../../../../../standalone managers/cursor manager")
-alias = "start"
-isActive = true
-isDynamic = true
-ui = NodePath("../../button_audio video")
-speaker_press = NodePath("../../../../../../speaker_press")
-speaker_hover = NodePath("../../../../../../speaker_hover")
-playing = true
-ui_opacity_active = 0.5
-
-[node name="true button_language" type="Button" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=592361344]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -38.0
-offset_top = 102.99994
-offset_right = -30.0
-offset_bottom = 110.99994
-scale = Vector2(14.8577, 3.01166)
-focus_neighbor_top = NodePath("../true button_audio video")
-focus_neighbor_bottom = NodePath("../true button_controller")
-
-[node name="button class_language" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/true button_language" unique_id=2143423570 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
-script = ExtResource("28")
-cursor = NodePath("../../../../../../standalone managers/cursor manager")
-alias = "options"
-isActive = true
-isDynamic = true
-ui = NodePath("../../button_language")
-speaker_press = NodePath("../../../../../../speaker_press")
-speaker_hover = NodePath("../../../../../../speaker_hover")
-playing = true
-ui_opacity_active = 0.5
-
-[node name="true button_controller" type="Button" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=832645349]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -50.99994
-offset_top = 128.0
-offset_right = -42.99994
-offset_bottom = 136.0
-scale = Vector2(17.9065, 2.77652)
-focus_neighbor_top = NodePath("../true button_language")
-focus_neighbor_bottom = NodePath("../true button_online service")
-
-[node name="button class_controller" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/true button_controller" unique_id=16196375 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
-script = ExtResource("28")
-cursor = NodePath("../../../../../../standalone managers/cursor manager")
-alias = "credits"
-isActive = true
-isDynamic = true
-ui = NodePath("../../button_controller")
-speaker_press = NodePath("../../../../../../speaker_press")
-speaker_hover = NodePath("../../../../../../speaker_hover")
-playing = true
-ui_opacity_active = 0.5
-
-[node name="true button_online service" type="Button" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1854580287]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -80.0
-offset_top = 154.0
-offset_right = -68.66333
-offset_bottom = 162.0
-scale = Vector2(17.9065, 2.77652)
-focus_neighbor_top = NodePath("../true button_controller")
-focus_neighbor_bottom = NodePath("../true button_exit sub options")
-
-[node name="button class_online service" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/true button_online service" unique_id=652275881 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
-script = ExtResource("28")
-cursor = NodePath("../../../../../../standalone managers/cursor manager")
-alias = "online service"
-isActive = true
-isDynamic = true
-ui = NodePath("../../button_online service")
-speaker_press = NodePath("../../../../../../speaker_press")
-speaker_hover = NodePath("../../../../../../speaker_hover")
-playing = true
-ui_opacity_active = 0.5
-
-[node name="true button_exit sub options" type="Button" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=641740606]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -28.0
-offset_top = 180.0
-offset_right = -20.0
-offset_bottom = 188.0
-scale = Vector2(11.9867, 2.77652)
-focus_neighbor_top = NodePath("../true button_online service")
-focus_neighbor_bottom = NodePath("../true button_audio video")
-
-[node name="button class_exit sub options" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/true button_exit sub options" unique_id=719944607 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
-script = ExtResource("28")
-cursor = NodePath("../../../../../../standalone managers/cursor manager")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
 alias = "exit"
 isActive = true
 isDynamic = true
-ui = NodePath("../../button_return")
-speaker_press = NodePath("../../../../../../speaker_press")
-speaker_hover = NodePath("../../../../../../speaker_hover")
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
 playing = true
+ui_opacity_active = 0.5
+
+[node name="button_copy_runtime_info" type="Label" parent="Camera/dialogue UI/menu ui/sub options select" unique_id=1070392119]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.000002
+offset_top = -25.0
+offset_right = 405.26367
+offset_bottom = 14.0
+grow_vertical = 0
+scale = Vector2(0.455, 0.463)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("27")
+theme_override_font_sizes/font_size = 26
+text = "COPY RUNTIME INFO"
+vertical_alignment = 1
+
+[node name="true button" type="Button" parent="Camera/dialogue UI/menu ui/sub options select/button_copy_runtime_info" unique_id=766822064]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../true button_exit")
+focus_neighbor_right = NodePath("../../Control_Github/true button")
+focus_neighbor_bottom = NodePath("../true button_multiplayer")
+metadata/_edit_lock_ = true
+
+[node name="button class" type="Node" parent="Camera/dialogue UI/menu ui/sub options select/button_copy_runtime_info/true button" unique_id=1525588285 node_paths=PackedStringArray("cursor", "ui", "speaker_press", "speaker_hover")]
+script = ExtResource("28")
+cursor = NodePath("../../../../../../../standalone managers/cursor manager")
+alias = "copy runtime info"
+isActive = true
+isDynamic = true
+ui = NodePath("../..")
+speaker_press = NodePath("../../../../../../../speaker_press")
+speaker_hover = NodePath("../../../../../../../speaker_hover")
 ui_opacity_active = 0.5
 
 [node name="options_audio video" type="Control" parent="Camera/dialogue UI/menu ui" unique_id=200051534]
@@ -2359,6 +2504,7 @@ playing = true
 ui_opacity_active = 0.5
 
 [node name="options_online service" type="Control" parent="Camera/dialogue UI/menu ui" unique_id=89946228]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

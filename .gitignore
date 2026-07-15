@@ -12,3 +12,5 @@ android/
 
 # Node
 **/node_modules/
+
+.llm/

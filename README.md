@@ -1,4 +1,6 @@
 # Open Buckshot Roulette
+[Github](https://github.com/1503Dev/OpenBuckshotRoulette) | [Gitee](https://gitee.com/dev1503/OpenBuckshotRoulette)
+
 **项目正在重制中**
 
 这是一个把 Buckshot Roulette (恶魔轮盘) 开源并扩展的项目，基于 v2.2.0.6 (Steam)  
@@ -7,6 +9,13 @@
 你需要使用 Godot Engine 4.7 及以上版本编辑它  
 
 多人游戏目前基本可用
+
+## 如何提交BUG
+在 [Github/Issues](https://github.com/1503Dev/OpenBuckshotRoulette/issues) 或 [Gitee/Issues](https://gitee.com/dev1503/OpenBuckshotRoulette/issues) 中新建一个议题，描述你遇到的问题，并包含你的运行信息(游戏版本、系统、机型、渲染器等)，最好是附上截图或视频，以及复现流程  
+
+你可以在 v1.0.2.17 及以上版本的主菜单中进入选项，点击左下角的 `复制运行信息` 文字来获取标准运行信息  
+
+欢迎所有人提交 Pull request
 
 ## 多人游戏
 ### 搭建服务器

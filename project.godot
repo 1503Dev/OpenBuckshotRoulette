@@ -14,7 +14,7 @@ config/name="Open Buckshot Roulette"
 config/name_localized={
 "zh": "恶魔轮盘CE"
 }
-config/version="1.0.1.16"
+config/version="1.0.2.17"
 run/main_scene="res://scenes/menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="dev1503.openbuckshotroulette"
@@ -621,6 +621,7 @@ locale/locale_filter_mode=0
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+shader_compiler/shader_cache/strip_debug=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 limits/opengl/max_lights_per_object=20
 environment/defaults/default_clear_color=Color(0.254902, 0.254902, 0.254902, 1)

@@ -158,11 +158,11 @@ func DealerChoice():
 			dealerKnowsShell = true
 			break
 		if (itemManager.itemArray_dealer[i] == "cigarettes"):
-			if (roundManager.health_opponent < roundManager.roundArray[0].startingHealth):
+			if (roundManager.health_opponent < roundManager.roundArray[roundManager.currentRound].startingHealth):
 				dealerWantsToUse = "cigarettes"
 				hasCigs = false
 				break
-		if (itemManager.itemArray_dealer[i] == "expired medicine" && roundManager.health_opponent < (roundManager.roundArray[0].startingHealth) && !hasCigs && !usingMedicine):
+		if (itemManager.itemArray_dealer[i] == "expired medicine" && roundManager.health_opponent < (roundManager.roundArray[roundManager.currentRound].startingHealth) && !hasCigs && !usingMedicine):
 			if (roundManager.health_opponent != 1): 
 				dealerWantsToUse = "expired medicine"
 				usingMedicine = true

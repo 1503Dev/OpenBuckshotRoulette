@@ -49,6 +49,7 @@ func _ready():
 	buttons[24].connect("is_pressed", GithubLink)
 	buttons[25].connect("is_pressed", Options_OnlineService)
 	buttons[26].connect("is_pressed", ReturnToLastScreen)
+	buttons[27].connect("is_pressed", func():pass)
 	
 	buttons_options[0].connect("is_pressed", IncreaseVol)
 	buttons_options[1].connect("is_pressed", DecreaseVol)
@@ -274,7 +275,6 @@ func ToggleGreyscaleDeath():
 func DiscordLink():
 	OS.shell_open(GlobalVariables.discord_link)
 func GithubLink():
-	print(GlobalVariables.github_link)
 	OS.shell_open(GlobalVariables.github_link)
 func RebindControls():
 	Show("rebind controls")

@@ -94,7 +94,7 @@ func InteractWith(alias : String, branch : MP_InteractionBranch = null) -> void:
 			if jammer_button.has_method("Press"): jammer_button.Press()
 
 func CheckIfHovering() -> void:
-	if !properties.major_permission_enabled:
+	if !properties.major_permission_enabled || properties.is_interacting_with_item:
 		cursor.SetCursorImage("point")
 		return
 		

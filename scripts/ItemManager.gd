@@ -411,8 +411,8 @@ func SetupItemSteal():
 	var ch = itemSpawnParent.get_children()
 	for c in ch.size():
 		if(ch[c].get_child(0) is PickupIndicator):
-			#var temp_indicator : PickupIndicator = ch[c].get_child(0)
-			#var temp_interaction : InteractionBranch = ch[c].get_child(1)
+			var temp_indicator : PickupIndicator = ch[c].get_child(0)
+			var temp_interaction : InteractionBranch = ch[c].get_child(1)
 			items_dynamicIndicatorArray.append(temp_indicator)
 			items_dynamicInteractionArray.append(temp_interaction)
 	
@@ -425,10 +425,6 @@ func SetupItemSteal():
 	btnParent_stealing.visible = true
 	if (cursor.controller_active): btnparent_ff_stealing.grab_focus()
 	controller.previousFocus = btnparent_ff_stealing
-	#for c in ch.size():
-		#if(ch[c].get_child(0) is PickupIndicator):
-			#var temp_indicator : PickupIndicator = ch[c].get_child(0)
-			#var temp_interaction : InteractionBranch = ch[c].get_child(1)
 	Counter(true)
 
 func RevertItemSteal(): 
@@ -445,7 +441,7 @@ func RevertItemSteal_Timeout():
 	var ch = itemSpawnParent.get_children()
 	for c in ch.size():
 		if(ch[c].get_child(0) is PickupIndicator):
-			#var temp_indicator : PickupIndicator = ch[c].get_child(0)
+			var temp_indicator : PickupIndicator = ch[c].get_child(0)
 			temp_indicator.Revert()
 	camera.BeginLerp("home")
 	await GlobalVariables.tree.create_timer(.4, false).timeout

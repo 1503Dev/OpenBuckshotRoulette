@@ -16,6 +16,7 @@ var active_interaction_branch : MP_InteractionBranch
 var active_separate_lerp : MP_SeparateLerp
 var active_id : int
 var active_item_has_secondary_interaction : bool
+var interact_request_pending := false
 
 var debug_index = -1
 func _unhandled_input(event):
@@ -39,7 +40,11 @@ func _unhandled_input(event):
 				properties.intermediary.packets.PipeData(packet)
 
 func InteractWithItemRequest(item_object_parent : Node3D, stealing_item : bool = false):
+	if interact_request_pending:
+		return
+	interact_request_pending = true
 	properties.permissions.SetMainPermission(false)
+	properties.interaction.activeInteractionBranch = null
 	GetItemVariables(item_object_parent)
 	var packet = {
 	"packet category": "MP_PacketVerification",
@@ -54,6 +59,11 @@ func InteractWithItemRequest(item_object_parent : Node3D, stealing_item : bool =
 	}
 	properties.intermediary.packets.send_p2p_packet_directly_to_host(GlobalSteam.STEAM_ID, packet)
 	if GlobalVariables.mp_debugging: properties.intermediary.packets.PipeData(packet)
+	await GlobalVariables.tree.create_timer(0.45, false).timeout
+	if interact_request_pending:
+		interact_request_pending = false
+		properties.permissions.SetMainPermission(true)
+		properties.SetTurnControllerPrompts(true)
 
 func RevertJammer():
 	jammer.speaker_fp_jammer_bootup_idle.stop()
@@ -86,6 +96,9 @@ func InteractWIthItemRequest_Secondary(secondary_interaction_dictionary : Dictio
 
 func ReceivePacket_InteractWithItem(packet : Dictionary):
 	if packet.socket_number == properties.socket_number:
+		if !interact_request_pending:
+			return
+		interact_request_pending = false
 		properties.has_turn = false
 		if packet.item_id == 8 or packet.item_id == 3:
 			properties.has_turn = true
@@ -124,10 +137,16 @@ func InteractWithItem_FirstPerson(packet : Dictionary):
 			if user_property.socket_number == packet.item_socket_number:
 				item_object = user_property.user_inventory_instance_array[local_grid_index]
 				break
-	var slot_check = properties.intermediary.game_state.MAIN_inventory_by_socket[packet.item_socket_number][local_grid_index]
-	if typeof(slot_check) == TYPE_DICTIONARY and slot_check.has("item_instance") and is_instance_valid(slot_check["item_instance"]):
-		item_object = slot_check["item_instance"]
+	if item_object == null:
+		var slot_check = properties.intermediary.game_state.MAIN_inventory_by_socket[packet.item_socket_number][local_grid_index]
+		if typeof(slot_check) == TYPE_DICTIONARY and slot_check.has("item_instance") and is_instance_valid(slot_check["item_instance"]):
+			item_object = slot_check["item_instance"]
 	RemoveItemFromInventory(local_grid_index, packet.item_socket_number)
+	if item_object == null:
+		interact_request_pending = false
+		properties.permissions.SetMainPermission(true)
+		properties.SetTurnControllerPrompts(true)
+		return
 	GetItemVariables(item_object)
 	ChangeGameStateWithItem(active_id, packet)
 	if !packet.stealing_item:
