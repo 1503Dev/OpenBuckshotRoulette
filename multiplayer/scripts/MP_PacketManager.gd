@@ -51,6 +51,10 @@ func send_p2p_packet_through_host(sending_From_id : int, packet_data : Dictionar
 
 func send_p2p_packet(target: int, packet_data: Dictionary) -> void:
 	if GlobalVariables.mp_debugging: return
+	if target == 0:
+		packet_data.erase("target_user_id")
+	else:
+		packet_data["target_user_id"] = target
 	var send_type: int = Steam.P2P_SEND_RELIABLE
 	var channel: int = 0
 	
@@ -76,6 +80,9 @@ func send_p2p_packet(target: int, packet_data: Dictionary) -> void:
 
 func _on_packet_received(readable_data: Dictionary):
 	var sender_id: int = GlobalSteam.HOST_ID
+	
+	if readable_data.has("target_user_id") && int(readable_data.target_user_id) != GlobalSteam.STEAM_ID:
+		return
 	
 	if GlobalSteam.STEAM_ID != GlobalSteam.HOST_ID:
 		if sender_id != GlobalSteam.HOST_ID: 
@@ -116,6 +123,9 @@ func read_p2p_packet() -> void:
 		
 		var packet_code: PackedByteArray = this_packet['data']
 		var readable_data: Dictionary = bytes_to_var(packet_code.decompress_dynamic(-1, FileAccess.COMPRESSION_GZIP))
+		
+		if readable_data.has("target_user_id") && int(readable_data.target_user_id) != GlobalSteam.STEAM_ID:
+			return
 		
 		if GlobalSteam.STEAM_ID != GlobalSteam.HOST_ID:
 			if packet_sender != GlobalSteam.HOST_ID: 

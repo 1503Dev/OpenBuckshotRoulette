@@ -17,20 +17,23 @@ func _ready() -> void:
 	intermediary = get_node("/root/mp_main/standalone managers/interactions/interaction intermediary")
 
 func _process(delta: float) -> void:
+	if !properties.is_active:
+		return
 	fps = int(1.0 / delta)
 	CheckIfHovering()
 	UpdateRaycastState()
-	if properties.is_active:
-		if !properties.camera_look.looking_active && properties.major_permission_enabled:
-			CheckPickupLerp()
-			CheckInteractionBranch()
+	if !properties.camera_look.looking_active && properties.major_permission_enabled:
+		CheckPickupLerp()
+		CheckInteractionBranch()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		if !properties.camera_look.looking_active && properties.major_permission_enabled:
+		if properties.is_active && !properties.camera_look.looking_active && properties.major_permission_enabled:
 			MainInteractionEvent()
 
 func MainInteractionEvent() -> void:
+	if !properties.is_active:
+		return
 	SyncPhysicsImmediate()
 	var wait_time = -0.00335 * fps + 0.217
 	wait_time = max(wait_time, 0)

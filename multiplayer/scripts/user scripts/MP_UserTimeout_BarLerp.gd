@@ -49,4 +49,3 @@ func Lerp():
 		var c = clampf(elapsed / duration, 0.0, 1.0)
 		var new_scale = lerp(scale_start, scale_end, c)
 		mesh.scale = new_scale
-

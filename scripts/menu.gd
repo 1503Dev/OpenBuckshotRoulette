@@ -88,7 +88,12 @@ func init_username() -> void:
 		saved_name = _generate_random_name()
 		NeoSettings.put("multiplayer/username", saved_name)
 	GlobalSteam.STEAM_NAME = saved_name
+	if _is_forcing_random_username():
+		GlobalSteam.STEAM_NAME = _generate_random_name()
 	update_user_name_label()
+
+func _is_forcing_random_username() -> bool:
+	return DebugTools.DEBUG_TOOLS_ENABLED && DebugTools.MULTIPLAYER_RANDOM_USERNAME
 
 func _generate_random_name() -> String:
 	var length = randi() % 5 + 6
@@ -352,8 +357,12 @@ func _on_button_class_pause_user_name_is_pressed() -> void:
 	var text = get_text_from_clipboard()
 	if text.length() <= 24 && text.length() >= 1:
 		NeoSettings.put("multiplayer/username", text)
-		GlobalSteam.STEAM_NAME = text
+		if !_is_forcing_random_username():
+			GlobalSteam.STEAM_NAME = text
 		update_user_name_label()
 
 func update_user_name_label():
+	if _is_forcing_random_username():
+		label_user_name.text = GlobalSteam.STEAM_NAME
+		return
 	label_user_name.text = NeoSettings.fetch("multiplayer/username", GlobalSteam.STEAM_NAME)

@@ -96,8 +96,6 @@ func InteractWIthItemRequest_Secondary(secondary_interaction_dictionary : Dictio
 
 func ReceivePacket_InteractWithItem(packet : Dictionary):
 	if packet.socket_number == properties.socket_number:
-		if !interact_request_pending:
-			return
 		interact_request_pending = false
 		properties.has_turn = false
 		if packet.item_id == 8 or packet.item_id == 3:
@@ -144,6 +142,8 @@ func InteractWithItem_FirstPerson(packet : Dictionary):
 	RemoveItemFromInventory(local_grid_index, packet.item_socket_number)
 	if item_object == null:
 		interact_request_pending = false
+		properties.is_interacting_with_item = false
+		properties.has_turn = true
 		properties.permissions.SetMainPermission(true)
 		properties.SetTurnControllerPrompts(true)
 		return

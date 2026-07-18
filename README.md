@@ -1,7 +1,8 @@
 # Open Buckshot Roulette
 [Github](https://github.com/1503Dev/OpenBuckshotRoulette) | [Gitee](https://gitee.com/dev1503/OpenBuckshotRoulette)
 
-**项目正在重制中**
+**项目正在重制中**  
+*正在收拾 MIKE KLUBNIKA 和我的一些烂摊子*
 
 这是一个把 Buckshot Roulette (恶魔轮盘) 开源并扩展的项目，基于 v2.2.0.6 (Steam)  
 如果你想修改或使用 Open Buckshot Roulette 请确保 Buckshot Roulette 在你的 itch.io 或 Steam 账户上可用

@@ -16271,13 +16271,13 @@ ui_element_to_affect = NodePath("../..")
 ui_element_to_affect_hover_transparency = 0.5
 
 [node name="match results ui" type="Control" parent="main ui" unique_id=1329252286]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="speaker_shell load ui" type="AudioStreamPlayer2D" parent="main ui/match results ui" unique_id=286229641]
 position = Vector2(132.485, 36.6448)
@@ -17695,7 +17695,7 @@ transform = Transform3D(0.999955, 0.00948284, 9.49949e-08, -9.0804e-08, -3.57628
 mesh = SubResource("ArrayMesh_jrcs7")
 
 [node name="sequence segment6" type="MeshInstance3D" parent="shell sequence machine main parent/shell sequence machine shell holder parent/sequence segment0/sequence segment1/sequence segment2/sequence segment3/sequence segment4/sequence segment5" unique_id=1586951288]
-transform = Transform3D(0.97436935, 0, -0.22495109, 0, 1, 0, 0.22495109, 0, 0.97436935, 0.439169, 0, 0)
+transform = Transform3D(0.9743692, 0, -0.22495106, 0, 1, 0, 0.22495106, 0, 0.9743692, 0.439169, 0, 0)
 mesh = SubResource("ArrayMesh_oj4og")
 
 [node name="single shell parent_segment6" parent="shell sequence machine main parent/shell sequence machine shell holder parent/sequence segment0/sequence segment1/sequence segment2/sequence segment3/sequence segment4/sequence segment5/sequence segment6" unique_id=1820230715 instance=ExtResource("179")]
@@ -18457,7 +18457,7 @@ layers = 512
 mesh = SubResource("ArrayMesh_trew1")
 
 [node name="fan spinner" type="MeshInstance3D" parent="interior environment main1/interior environment parent/fan parent" unique_id=2030130968]
-transform = Transform3D(-0.98452926, 0, 0.17521325, 0, 1, 0, -0.17521325, 0, -0.98452926, 0.238844, 3.59178, -1.38604)
+transform = Transform3D(-0.98452914, 0, 0.17521323, 0, 1, 0, -0.17521323, 0, -0.98452914, 0.238844, 3.59178, -1.38604)
 layers = 0
 mesh = SubResource("ArrayMesh_hw268")
 
@@ -18688,7 +18688,7 @@ layers = 512
 mesh = SubResource("ArrayMesh_4ym8o")
 
 [node name="lintmakk spinner left" type="MeshInstance3D" parent="interior environment main1/interior environment parent/wall shelf/lintmakk parent" unique_id=397130455]
-transform = Transform3D(-0.07033546, 0, 0.99752134, 0, 1, 0, -0.99752134, 0, -0.07033546, -1.39709, 1.20634, -3.75264)
+transform = Transform3D(-0.070335455, 0, 0.9975212, 0, 1, 0, -0.9975212, 0, -0.070335455, -1.39709, 1.20634, -3.75264)
 layers = 512
 mesh = SubResource("ArrayMesh_k0f7u")
 
@@ -19658,7 +19658,7 @@ libraries/ = SubResource("AnimationLibrary_c0m7n")
 autoplay = &"hustler reset"
 
 [node name="global camera" type="Camera3D" parent="." unique_id=1127327122]
-transform = Transform3D(-0.7778022, -0.027310202, -0.6279153, 0.04483175, 0.99409926, -0.09877018, 0.626908, -0.10497417, -0.7719887, -19.3987, 23.5252, -179.647)
+transform = Transform3D(-0.7778022, -0.0273102, -0.6279153, 0.04483175, 0.99409914, -0.09877018, 0.626908, -0.10497416, -0.7719887, -19.3987, 23.5252, -179.647)
 current = true
 fov = 42.0
 

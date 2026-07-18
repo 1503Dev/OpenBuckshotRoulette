@@ -195,10 +195,14 @@ func Global_AddItemToInventory(socket_number : int, instance : Node3D, item_id :
 	MAIN_inventory_by_socket[socket_number][local_grid_index] = dict
 
 func Global_RemoveItemFromInventory(socket_number : int, local_grid_index):
+	var slot = MAIN_inventory_by_socket[socket_number][local_grid_index]
+	if typeof(slot) != TYPE_DICTIONARY || !slot.has("item_id"):
+		MAIN_inventory_by_socket[socket_number][local_grid_index] = {}
+		return
 	for property in instance_handler.instance_property_array:
 		if property.socket_number == socket_number:
-			property.user_inventory_count_by_item_id[MAIN_inventory_by_socket[socket_number][local_grid_index]["item_id"]] -= 1
-	global_item_count_on_table_by_id[MAIN_inventory_by_socket[socket_number][local_grid_index]["item_id"]] -= 1
+			property.user_inventory_count_by_item_id[slot["item_id"]] -= 1
+	global_item_count_on_table_by_id[slot["item_id"]] -= 1
 	MAIN_inventory_by_socket[socket_number][local_grid_index] = {}
 
 func Global_ClearInventoryDictionaries(socket_number : int):
