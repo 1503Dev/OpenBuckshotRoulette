@@ -1,6 +1,6 @@
 extends Node
 
-var currentVersion_nr:= "v1.0.3.18 EXTENDS v2.2.0"
+var currentVersion_nr:= "v1.0.2.18 EXTENDS v2.2.0"
 var currentVersion_hotfix:= 6
 var using_steam:= false
 var all_steam_features_enabled:= true
@@ -9,7 +9,7 @@ const PROTOCOL := 4
 var currentVersion:= ""
 var versuffix_steam:= " (STEAM)"
 var versuffix_itch:= " (ITCH.IO)"
-var versuffix_community:= " (OPEN SOURCE)"
+var versuffix_community:= ""
 
 var discord_link:= "https://discord.gg/UdjMNaKkQe"
 var github_link:= "https://github.com/1503Dev/OpenBuckshotRoulette"

@@ -1,5 +1,7 @@
 extends Label
 
+@onready var label_version: Label = $Label_Version
+
 var frames_render: int = 0
 var frames_render_2: float = 0.0
 var frames_physics: int = 0
@@ -34,3 +36,4 @@ func _on_timer_fps_timeout() -> void:
 
 func _ready() -> void:
 	is_beta = GlobalVariables.currentVersion_nr.contains('beta')
+	label_version.text = 'Open Buckshot Roulette ' + GlobalVariables.currentVersion

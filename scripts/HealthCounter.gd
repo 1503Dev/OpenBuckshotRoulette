@@ -124,7 +124,7 @@ func UpdateDisplayRoutine(isRaisingHealth : bool, goingToPreviousSocket : bool, 
 var overriding_medicine_adding = false
 var overriding_medicine = false
 func UpdateDisplayRoutineCigarette_Enemy():
-	var maxHealth = roundManager.roundArray[roundManager.currentRound].startingHealth
+	var maxHealth = roundManager.roundArray[0].startingHealth
 	var changingHealth = false
 	var prevhealth = roundManager.health_opponent
 	if (!roundManager.wireIsCut_dealer && !overriding_medicine): roundManager.health_opponent += 1
@@ -139,7 +139,7 @@ func UpdateDisplayRoutineCigarette_Enemy():
 	pass
 
 func UpdateDisplayRoutineCigarette_Player():
-	var maxHealth = roundManager.roundArray[roundManager.currentRound].startingHealth
+	var maxHealth = roundManager.roundArray[0].startingHealth
 	var changingHealth = false
 	var prevhealth = roundManager.health_player
 	if (!roundManager.wireIsCut_player && !overriding_medicine): roundManager.health_player += 1

@@ -26,7 +26,7 @@ var dealer_health:= 0
 var _mp_hide_dealer_in_debug_panel := false
 var mp_gambling_refresh_ttl := 0.0
 
-const DEBUG_TOOLS_ENABLED := true
+const DEBUG_TOOLS_ENABLED := false
 const SKIP_SPLASH_ANIM := true
 const MULTIPLAYER_BOT_ENABLED := false
 const MULTIPLAYER_RANDOM_USERNAME := true

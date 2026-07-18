@@ -14,7 +14,7 @@ config/name="Open Buckshot Roulette"
 config/name_localized={
 "zh": "恶魔轮盘CE"
 }
-config/version="1.0.3.18"
+config/version="1.0.2.18"
 run/main_scene="res://scenes/menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="dev1503.openbuckshotroulette"

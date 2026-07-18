@@ -5527,13 +5527,13 @@ grow_vertical = 0
 scale = Vector2(0.299635, 0.438273)
 
 [node name="return to main menu" type="Label" parent="ui/ui parent main/ui parent_lobby home/Control" unique_id=1837054211]
-layout_direction = 3
 layout_mode = 0
 offset_left = 60.26526
 offset_top = 99.677246
 offset_right = 588.26526
 offset_bottom = 157.67725
 pivot_offset = Vector2(541, 0)
+layout_direction = 3
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
 theme_override_constants/outline_size = 2
@@ -5565,15 +5565,15 @@ speaker_button_hover = NodePath("../../../../../../../speaker_hover")
 lobby_manager = NodePath("../../../../../../../standalone managers/lobby manager")
 
 [node name="find players to play with" type="Label" parent="ui/ui parent main/ui parent_lobby home/Control" unique_id=550524758]
-layout_direction = 3
 layout_mode = 0
 offset_left = 154.26172
 offset_top = 52.677246
 offset_right = 804.2617
 offset_bottom = 110.677246
 pivot_offset = Vector2(541, 0)
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+layout_direction = 3
+theme_override_colors/font_color = Color(0, 1, 0, 0.49803922)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 0.49803922)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("15")
 theme_override_font_sizes/font_size = 39
@@ -5592,13 +5592,14 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.884, 1)
 theme = ExtResource("16")
+disabled = true
 
 [node name="button class_find players to play with" type="Node" parent="ui/ui parent main/ui parent_lobby home/Control/find players to play with/button_find players to play with" unique_id=1185319349 node_paths=PackedStringArray("ui_element_to_affect", "cursor", "speaker_button_press", "speaker_button_hover", "lobby_manager")]
 script = ExtResource("17")
-alias = "find players to play with"
+alias = "_find players to play with"
 is_lobby_scene = true
 ui_element_to_affect = NodePath("../..")
-ui_element_to_affect_hover_transparency = 0.5
+ui_element_to_affect_hover_transparency = 1.0
 cursor = NodePath("../../../../../../../standalone managers/cursor manager")
 speaker_button_press = NodePath("../../../../../../../speaker_press")
 speaker_button_hover = NodePath("../../../../../../../speaker_hover")
@@ -8097,7 +8098,7 @@ transform = Transform3D(0.999955, 0.00948284, 9.49949e-08, -9.0804e-08, -3.57628
 mesh = SubResource("ArrayMesh_vwr5j")
 
 [node name="sequence segment6" type="MeshInstance3D" parent="shell sequence machine main parent/shell sequence machine shell holder parent/sequence segment0/sequence segment1/sequence segment2/sequence segment3/sequence segment4/sequence segment5" unique_id=1655276414]
-transform = Transform3D(0.97436965, 0, -0.22495116, 0, 1, 0, 0.22495116, 0, 0.97436965, 0.439169, 0, 0)
+transform = Transform3D(0.9743696, 0, -0.22495115, 0, 1, 0, 0.22495115, 0, 0.9743696, 0.439169, 0, 0)
 mesh = SubResource("ArrayMesh_qgvpn")
 
 [node name="single shell parent_segment6" parent="shell sequence machine main parent/shell sequence machine shell holder parent/sequence segment0/sequence segment1/sequence segment2/sequence segment3/sequence segment4/sequence segment5/sequence segment6" unique_id=974449199 instance=ExtResource("73")]

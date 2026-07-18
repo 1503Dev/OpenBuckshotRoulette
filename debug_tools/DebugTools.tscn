@@ -3,12 +3,16 @@
 [ext_resource type="Script" uid="uid://dhyrqicv4ud8j" path="res://debug_tools/debug_tools.gd" id="1_u2hdw"]
 [ext_resource type="FontFile" uid="uid://lygcike6do71" path="res://fonts/Consolas-Regular.ttf" id="2_fpd2w"]
 [ext_resource type="Script" uid="uid://b84s0wg4b5xj1" path="res://debug_tools/label_fps.gd" id="3_n84is"]
+[ext_resource type="FontFile" uid="uid://vhuc21nhg4e1" path="res://fonts/steelfish rg.otf" id="4_riupg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u2hdw"]
 font_color = Color(0, 0.671549, 0.671549, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n84is"]
+line_spacing = 0.0
 font = ExtResource("2_fpd2w")
+font_size = 12
+font_color = Color(1, 1, 1, 0.5647059)
 
 [node name="DebugTools" type="Node" unique_id=1807873415]
 process_mode = 3
@@ -362,9 +366,12 @@ value = 1.0
 process_mode = 3
 top_level = true
 z_index = 4096
-offset_left = 46.0
-offset_right = 90.0
-offset_bottom = 17.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "FPS: "
 label_settings = SubResource("LabelSettings_n84is")
 script = ExtResource("3_n84is")
@@ -372,6 +379,23 @@ script = ExtResource("3_n84is")
 [node name="Timer_FPS" type="Timer" parent="Label_FPS" unique_id=903501646]
 autostart = true
 ignore_time_scale = true
+
+[node name="Label_Version" type="Label" parent="Label_FPS" unique_id=409926079]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -16.0
+offset_right = -1.0009766
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.16470589)
+theme_override_fonts/font = ExtResource("4_riupg")
+theme_override_font_sizes/font_size = 12
+text = "Open Buckshot Roulette v0.0.0.0"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer_Aways/Button_Open" to="." method="_on_button_open_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button_Close" to="." method="_on_button_close_pressed"]
