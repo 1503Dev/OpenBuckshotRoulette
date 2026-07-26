@@ -1,0 +1,42 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://ete4i36ps8ti"]
+
+[ext_resource type="Texture2D" uid="uid://c07s2sswaersk" path="res://models/backroom blockout5/backroom blockout6_rough steel darkened png.png" id="1_kmm25"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jy5a"]
+resource_name = "steel rough darkened"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_kmm25")
+roughness = 0.781818
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ykpa"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 23.2293, 2.00001),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "steel rough darkened",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACAvwAAgL8AAIA/AACAv47VsUEAAIA/AACAvwAAgL8AAIC/AACAv47VsUEAAIC/AACAPwAAgL8AAIA/AACAP47VsUEAAIA/AACAPwAAgL8AAIC/AACAP47VsUEAAIC/")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "backroom blockout6_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 23.2293, 2.00001),
+"attribute_data": PackedByteArray("AADAPgAAgD8AAAA+AACAPgAAwD4AAAAAAAAgPwAAgD8AACA/AAAAAAAAYD8AAIA+AADAPgAAQD8AAAA+AAAAPwAAwD4AAEA/AAAgPwAAQD8AACA/AABAPwAAYD8AAAA/AADAPgAAgD4AAMA+AACAPgAAwD4AAIA+AAAgPwAAgD4AACA/AACAPgAAID8AAIA+AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AAAgPwAAAD8AACA/AAAAPwAAID8AAAA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
+"material": SubResource("StandardMaterial3D_0jy5a"),
+"name": "steel rough darkened",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAv47VsUEAAIA/AACAv47VsUEAAIA/AACAv47VsUEAAIA/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAv47VsUEAAIC/AACAv47VsUEAAIC/AACAv47VsUEAAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAP47VsUEAAIA/AACAP47VsUEAAIA/AACAP47VsUEAAIA/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAP47VsUEAAIC/AACAP47VsUEAAIC/AACAP47VsUEAAIC/AAD/f/9/////fwAA////v/9//3//f///AAD/f/9/////f/9//3////9///8AAP+/AAD/f/9/////fwAA////v///////f///AAD/f/9//////////3////9///8AAP+//38AAP///7//f/9//3///////3//f////3//f/9/////f///AAD/v////3//f////38AAP///7///////3///////3//f/////////9/////f///AAD/v////3//f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6ykpa")
