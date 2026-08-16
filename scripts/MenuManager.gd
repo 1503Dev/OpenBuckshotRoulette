@@ -124,7 +124,7 @@ var c = false
 var fs = false
 func T():
 	if c: t+= get_process_delta_time()
-	if t > 9 && !fs:
+	if t > 4 && !fs:
 		FinishIntro()
 		fs = true
 
@@ -215,7 +215,7 @@ func Start():
 	speaker_start.play()
 	cursor.SetCursor(false, false)
 	savefile.ClearSave()
-	if !DebugTools.DEBUG_TOOLS_ENABLED or !DebugTools.SKIP_SPLASH_ANIM: await GlobalVariables.tree.create_timer(4, false).timeout
+	if !DebugTools.DEBUG_TOOLS_ENABLED or !DebugTools.SKIP_SPLASH_ANIM: await GlobalVariables.tree.create_timer(2, false).timeout
 	print("changing scene to: main")
 	GlobalVariables.tree.change_scene_to_file("res://scenes/main.tscn")
 
@@ -238,7 +238,7 @@ func StartMultiplayer():
 	speaker_start.play()
 	cursor.SetCursor(false, false)
 	savefile.ClearSave()
-	if !DebugTools.DEBUG_TOOLS_ENABLED or !DebugTools.SKIP_SPLASH_ANIM: await GlobalVariables.tree.create_timer(4, false).timeout
+	if !DebugTools.DEBUG_TOOLS_ENABLED or !DebugTools.SKIP_SPLASH_ANIM: await GlobalVariables.tree.create_timer(2, false).timeout
 	print("changing scene to: lobby")
 	GlobalVariables.tree.change_scene_to_file("res://multiplayer/scenes/mp_lobby.tscn")
 

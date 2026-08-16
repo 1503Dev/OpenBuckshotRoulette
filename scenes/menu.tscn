@@ -413,7 +413,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_mclm0"]
 resource_name = "snap"
-length = 10.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -421,7 +421,7 @@ tracks/0/path = NodePath("light_right side:light_energy")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [400.0, 0.0]
@@ -433,7 +433,7 @@ tracks/1/path = NodePath("light_left side:light_energy")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [400.0, 0.0]
@@ -445,7 +445,7 @@ tracks/2/path = NodePath("Camera/dialogue UI/viewblocker parent/viewblocker:colo
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.6, 4),
+"times": PackedFloat32Array(0, 1.7333333, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
@@ -468,7 +468,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_fhumc"]
 resource_name = "splash screen"
-length = 15.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -476,7 +476,7 @@ tracks/0/path = NodePath("Camera/dialogue UI/viewblocker parent/viewblocker:colo
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4.4, 6.4, 6.6, 11.2),
+"times": PackedFloat32Array(0, 1, 2, 3, 3.1999998, 5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
@@ -488,7 +488,7 @@ tracks/1/path = NodePath("Camera/dialogue UI/viewblocker parent/ratchet:visible"
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.5),
+"times": PackedFloat32Array(0, 3.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
